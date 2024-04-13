@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eurekaserver
+  security:
+    basic:
+      enabled: true
+    user:
+      name: d3n15-eureka-user
+      password: d3n15tec123456789
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

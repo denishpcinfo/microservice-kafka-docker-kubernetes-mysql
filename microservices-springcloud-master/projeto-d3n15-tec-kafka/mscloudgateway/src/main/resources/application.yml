@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: mscloudgateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8081/realms/d3n15tec
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://d3n15-eureka-user:d3n15tec123456789@localhost:8761/eureka
